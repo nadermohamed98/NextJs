@@ -15,12 +15,10 @@ export default async function Page(
             page?:number;
         }
     }
-    ) {
-        const query = searchParams?.query || '';
-        const currentPage = searchParams?.page || 1;
-
-        // const totalPages = await fetchInvoicesPages(query);
-        const totalPages = await fetchInvoicesPages(query);
+) {
+    const query = searchParams?.query || '';
+    const currentPage = searchParams?.page || 1;
+    const totalPages = await fetchInvoicesPages(query);
 
     return (
         <div className="w-full">
